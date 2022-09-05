@@ -42,7 +42,7 @@ const displayWeatherData = (data) => {
         .setAttribute('src', `https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`);
 };
 
-searchField.addEventListener('onchange', (event) => {
+searchField.addEventListener('keyup', (event) => {
 	const value = event.target.value;
 	const matchedCity = allCity.filter((city) =>
 		city[0].toLowerCase().includes(value)
