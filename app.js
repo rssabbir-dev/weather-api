@@ -43,9 +43,7 @@ const displayWeatherData = (data) => {
 };
 
 searchField.addEventListener('keyup', (event) => {
-	document.getElementById('typed-text').innerText = event.target.value;
-
-	const value = event.target.value;
+	const value = event.target.value.toLowerCase();
 	const matchedCity = allCity.filter((city) =>
 		city[0].toLowerCase().includes(value)
     );
