@@ -7,7 +7,6 @@ const loadCountryData = async () => {
 	const url = 'https://restcountries.com/v3.1/all';
 	const response = await fetch(url);
 	const data = await response.json();
-	console.log(data);
 	loadCityName(data);
 };
 
@@ -45,6 +44,7 @@ const displayWeatherData = (data) => {
 
 searchField.addEventListener('keyup', (event) => {
 	document.getElementById('typed-text').innerText = event.target.value;
+
 	const value = event.target.value;
 	const matchedCity = allCity.filter((city) =>
 		city[0].toLowerCase().includes(value)
